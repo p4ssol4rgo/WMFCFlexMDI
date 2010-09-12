@@ -28,16 +28,16 @@ package org.wmfc.mdi
 		
 		protected function globalErrorHandler(event:UncaughtErrorEvent):void {
 			
-			var titulo:String = "Erro ";
-			var mensagem:String = "";
-			var detalhes:String = "";
+			var title:String = "Error";
+			var mensage:String = "";
+			var detail:String = "";
 			
 			if (event.error is Error)
 			{
 				var error:Error = event.error as Error;
-				titulo += error.errorID;
-				mensagem = "" + error.name;
-				detalhes = "" + error.message;
+				title += error.errorID;
+				mensage = "" + error.name;
+				detail = "" + error.message;
 				
 				trace(error.errorID, error.name, error.message);
 			}
@@ -45,17 +45,17 @@ package org.wmfc.mdi
 			{
 				var errorEvent:ErrorEvent = event.error as ErrorEvent;
 				
-				titulo += errorEvent.errorID;
-				mensagem = errorEvent.text;
-				detalhes = errorEvent.type;
+				title += errorEvent.errorID;
+				mensage = errorEvent.text;
+				detail = errorEvent.type;
 				
 				trace(errorEvent.errorID);
 			}else{
-				mensagem = "Erro desconhecido!";
-				detalhes = event.text + "" + event.toString();
+				mensage = "Unknown Error!";
+				detail = event.text + "" + event.toString();
 			}
 			
-			MessageBox.showError(mensagem + "\n" + detalhes, titulo);
+			MessageBox.showError(mensage + "\n" + detail, title);
 		}
 	}
 }
