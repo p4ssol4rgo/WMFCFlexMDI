@@ -12,7 +12,7 @@
         </excludedEntries>
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="2" path="/FlexFramework/bin/FlexFramework.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="2" path="/FlexComponentes/bin/FlexComponentes.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="2" path="/FlexComponents/bin/FlexComponents.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>

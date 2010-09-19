@@ -5,7 +5,7 @@ package org.wmfc.mdi
 	
 	import mx.events.FlexEvent;
 	
-	import org.wmfc.componentes.alert.MessageBox;
+	import org.wmfc.components.alert.MessageBox;
 	
 	import spark.components.Application;
 	
