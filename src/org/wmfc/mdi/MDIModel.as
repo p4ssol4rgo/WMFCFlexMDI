@@ -6,6 +6,8 @@ package org.wmfc.mdi
 	import mx.events.FlexEvent;
 	
 	import org.wmfc.components.alert.MessageBox;
+	import org.wmfc.components.containers.Window;
+	import org.wmfc.utils.modules.ModuleLoader;
 	
 	import spark.components.Application;
 	
@@ -56,6 +58,14 @@ package org.wmfc.mdi
 			}
 			
 			MessageBox.showError(mensage + "\n" + detail, title);
+		}
+		
+		protected function openModuleWindow(loader:ModuleLoader):Window {
+			var newWindow:Window = new Window();
+			newWindow.addElement(loader);
+			newWindow.show();
+			
+			return newWindow;
 		}
 	}
 }
